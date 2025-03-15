@@ -1249,6 +1249,11 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.pkg_analyze_result)
 
+        self.start_pkg_analyzing_btn = QPushButton(self.analyze_packages_tab)
+        self.start_pkg_analyzing_btn.setObjectName(u"start_pkg_analyzing_btn")
+
+        self.verticalLayout_5.addWidget(self.start_pkg_analyzing_btn)
+
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.verticalLayout_3 = QVBoxLayout()
@@ -1319,6 +1324,11 @@ class Ui_MainWindow(object):
         self.info_about_network_tab.setObjectName(u"info_about_network_tab")
         self.verticalLayout_6 = QVBoxLayout(self.info_about_network_tab)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.get_net_info_btn = QPushButton(self.info_about_network_tab)
+        self.get_net_info_btn.setObjectName(u"get_net_info_btn")
+
+        self.verticalLayout_6.addWidget(self.get_net_info_btn)
+
         self.public_ip_addr_lbl = QLabel(self.info_about_network_tab)
         self.public_ip_addr_lbl.setObjectName(u"public_ip_addr_lbl")
         self.public_ip_addr_lbl.setStyleSheet(u"font: 14pt \"Arial\";")
@@ -1451,45 +1461,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addItem(self.horizontalSpacer)
 
-        self.info_about_domain_lbl = QLabel(self.netutils_tab)
-        self.info_about_domain_lbl.setObjectName(u"info_about_domain_lbl")
-        self.info_about_domain_lbl.setStyleSheet(u"font: 14pt \"Arial\";")
-
-        self.verticalLayout_9.addWidget(self.info_about_domain_lbl)
-
-        self.enter_domain_lbl2 = QLineEdit(self.netutils_tab)
-        self.enter_domain_lbl2.setObjectName(u"enter_domain_lbl2")
-        self.enter_domain_lbl2.setStyleSheet(u"font: 14pt \"Arial\";")
-
-        self.verticalLayout_9.addWidget(self.enter_domain_lbl2)
-
-        self.get_info_about_domain_btn = QPushButton(self.netutils_tab)
-        self.get_info_about_domain_btn.setObjectName(u"get_info_about_domain_btn")
-        self.get_info_about_domain_btn.setStyleSheet(u"font: 14pt \"Arial\";")
-
-        self.verticalLayout_9.addWidget(self.get_info_about_domain_btn)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.verticalLayout_9.addItem(self.horizontalSpacer_2)
-
         self.ip_in_black_dns_lbl = QLabel(self.netutils_tab)
         self.ip_in_black_dns_lbl.setObjectName(u"ip_in_black_dns_lbl")
-        self.ip_in_black_dns_lbl.setStyleSheet(u"font: 14pt \"Arial\";")
+        self.ip_in_black_dns_lbl.setStyleSheet(u"font: 16pt \"Arial\";\n"
+"text-align: center;")
 
         self.verticalLayout_9.addWidget(self.ip_in_black_dns_lbl)
-
-        self.enter_ip_addr_line = QLineEdit(self.netutils_tab)
-        self.enter_ip_addr_line.setObjectName(u"enter_ip_addr_line")
-        self.enter_ip_addr_line.setStyleSheet(u"font: 14pt \"Arial\";")
-
-        self.verticalLayout_9.addWidget(self.enter_ip_addr_line)
-
-        self.get_ip_in_black_dns_btn = QPushButton(self.netutils_tab)
-        self.get_ip_in_black_dns_btn.setObjectName(u"get_ip_in_black_dns_btn")
-        self.get_ip_in_black_dns_btn.setStyleSheet(u"font: 14pt \"Arial\";")
-
-        self.verticalLayout_9.addWidget(self.get_ip_in_black_dns_btn)
 
         self.tabWidget.addTab(self.netutils_tab, "")
         self.tab_6 = QWidget()
@@ -1573,6 +1550,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.port_scanner_tab), QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0435\u0440 \u043f\u043e\u0440\u0442\u043e\u0432", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u0410\u043d\u0430\u043b\u0438\u0437 \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0438 \u043f\u0430\u043a\u0435\u0442\u043e\u0432", None))
         self.pkg_analyze_result.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442: 0 \u043f\u0430\u043a\u0435\u0442\u043e\u0432 \u0430\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043e", None))
+        self.start_pkg_analyzing_btn.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0447\u0430\u0442\u044c \u0430\u043d\u0430\u043b\u0438\u0437", None))
         self.good_pkgs_label.setText(QCoreApplication.translate("MainWindow", u"\u041d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0435", None))
         ___qtablewidgetitem3 = self.good_pkgs_table.horizontalHeaderItem(0)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430", None));
@@ -1596,6 +1574,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem12 = self.bad_pkgs_table.horizontalHeaderItem(4)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0437\u043c\u0435\u0440", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.analyze_packages_tab), QCoreApplication.translate("MainWindow", u"\u0410\u043d\u0430\u043b\u0438\u0437 \u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0438 \u043f\u0430\u043a\u0435\u0442\u043e\u0432", None))
+        self.get_net_info_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u0441\u0435\u0442\u0438", None))
         self.public_ip_addr_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u044b\u0439 IP \u0430\u0434\u0440\u0435\u0441:", None))
         self.local_ip_addr_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 IP-\u0430\u0434\u0440\u0435\u0441: ", None))
         self.ip_addr_default_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 IP \u0430\u0434\u0440\u0435\u0441 \u0448\u043b\u044e\u0437\u0430 \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e: ", None))
@@ -1625,12 +1604,7 @@ class Ui_MainWindow(object):
         self.ip_addr_by_domain_lbl.setText(QCoreApplication.translate("MainWindow", u"IP-\u0430\u0434\u0440\u0435\u0441 \u043f\u043e \u0434\u043e\u043c\u0435\u043d\u0443", None))
         self.enter_domain_line.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u043e\u043c\u0435\u043d", None))
         self.get_domain_name_btn.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0437\u043d\u0430\u0442\u044c \u0434\u043e\u043c\u0435\u043d\u043d\u043e\u0435 \u0438\u043c\u044f", None))
-        self.info_about_domain_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e \u0434\u043e\u043c\u0435\u043d\u0435", None))
-        self.enter_domain_lbl2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u043e\u043c\u0435\u043d", None))
-        self.get_info_about_domain_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u0434\u043e\u043c\u0435\u043d\u0435", None))
-        self.ip_in_black_dns_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0437\u043d\u0430\u0442\u044c, \u0435\u0441\u0442\u044c \u043b\u0438 IP \u0432 \u0447\u0435\u0440\u043d\u044b\u0445 \u0441\u043f\u0438\u0441\u043a\u0430\u0445 DNS", None))
-        self.enter_ip_addr_line.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 IP", None))
-        self.get_ip_in_black_dns_btn.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0437\u043d\u0430\u0442\u044c, \u0435\u0441\u0442\u044c \u043b\u0438 IP \u0432 \u0447\u0435\u0440\u043d\u044b\u0445 \u0441\u043f\u0438\u0441\u043a\u0430\u0445 DNS", None))
+        self.ip_in_black_dns_lbl.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0442\u0438\u043b\u0438\u0442\u044b \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.netutils_tab), QCoreApplication.translate("MainWindow", u"\u0421\u0435\u0442\u0435\u0432\u044b\u0435 \u0443\u0442\u0438\u043b\u0438\u0442\u044b", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u043d\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 \u0441\u043e\u0437\u0434\u0430\u043d \u0434\u043b\u044f \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0441\u0435\u0442\u0435\u0432\u043e\u0439 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u0438 \u0441\u0434\u0435\u043b\u0430\u043d \u0434\u043b\u044f Windows.\n"
 "\u0424\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u0431\u0443\u0434\u0435\u0442 \u0437\u0430\u043a\u043b\u044e\u0447\u0430\u0442\u044c\u0441\u044f \u0432 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u043c:\n"

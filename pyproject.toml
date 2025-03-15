@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dearpygui>=2.0.0",
+    "nuitka>=2.6.8",
     "psutil>=7.0.0",
     "pyqtdarktheme>=2.1.0",
     "pyside6>=6.8.2.1",

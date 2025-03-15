@@ -1260,6 +1260,13 @@ QProgressBar::chunk
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="start_pkg_analyzing_btn">
+          <property name="text">
+           <string>Начать анализ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1364,6 +1371,13 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <string>Информация о сети</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QPushButton" name="get_net_info_btn">
+          <property name="text">
+           <string>Получить информацию о сети</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QLabel" name="public_ip_addr_lbl">
           <property name="styleSheet">
@@ -1574,75 +1588,13 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="info_about_domain_lbl">
-          <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Информация о домене</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="enter_domain_lbl2">
-          <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
-          </property>
-          <property name="placeholderText">
-           <string>Введите домен</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="get_info_about_domain_btn">
-          <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Получить информацию о домене</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <widget class="QLabel" name="ip_in_black_dns_lbl">
           <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+           <string notr="true">font: 16pt &quot;Arial&quot;;
+text-align: center;</string>
           </property>
           <property name="text">
-           <string>Узнать, есть ли IP в черных списках DNS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="enter_ip_addr_line">
-          <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
-          </property>
-          <property name="placeholderText">
-           <string>Введите IP</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="get_ip_in_black_dns_btn">
-          <property name="styleSheet">
-           <string notr="true">font: 14pt &quot;Arial&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Узнать, есть ли IP в черных списках DNS</string>
+           <string>Утилиты в разработке</string>
           </property>
          </widget>
         </item>
